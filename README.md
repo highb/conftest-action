@@ -17,5 +17,5 @@ None. Job fails if conftest returns non-zero.
 ```github
 uses: highb/conftest-action@v1.0.0
 with:
-  args: 'conftest test -p policy/k8s.rego manifests/*.yaml -o table'
+  args: 'test -p policy/k8s.rego manifests/*.yaml -o table'
 ```
