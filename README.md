@@ -1,2 +1,19 @@
 # conftest-action
-A GitHub action to run OPA conftest
+
+This GitHub Action runs [Open Policy Agent](https://github.com/open-policy-agent) [conftest](https://github.com/open-policy-agent/conftest).
+
+## Inputs
+
+## `args`
+
+**Required** Arguments to conftest. e.g. "test -p policy/k8s.rego manifests/*.yaml -o table"
+
+## Outputs
+
+None. Job fails if conftest returns non-zero.
+
+## Example usage
+
+uses: highb/conftest-action@v1.0.0
+with:
+  args: 'conftest test -p policy/k8s.rego manifests/*.yaml -o table'
